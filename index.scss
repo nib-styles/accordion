@@ -1,0 +1,46 @@
+$component-name: 'nib-styles-accordion';
+
+.accordion {
+  .accordion__trigger {
+    @extend .btn;
+    @extend .btn--panel;
+    margin-bottom: -1px;
+
+    &:after {
+      opacity: 0.8;
+      @include show-pseudo-element;
+      @include top-right(10px, 7px);
+      height: 16px;
+      width: 16px;
+      background: relative-url('down.png') no-repeat top right;
+    }
+    &.is-open:after {
+      background-image: relative-url('up.png');
+    }
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.csstransitions .accordion {
+  .accordion__body {
+    @include transition(height 0.7s ease-in-out());
+    height: 0;
+    overflow: hidden;
+    &.no-transitions {
+      @include transition(none);
+    }
+  }
+}
+
+.no-csstransitions .accordion {
+  & > .accordion__body {
+    display: none;
+  }
+  &.is-open > .accordion__body {
+    display: block;
+  }
+}

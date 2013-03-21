@@ -1,0 +1,11 @@
+{
+  "name": "accordion",
+  "main": "index.scss",
+  "version": "0.1.0",
+  "dependencies": {
+    "nib-styles-common": "*",
+    "nib-styles-mixins": "*"
+  },
+  "styles": ["index.scss"],
+  "files": ["down.png", "up.png"]
+}
