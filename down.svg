@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="468px" height="467px" viewBox="0 0 468 467" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>Slice 1</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page 1" fill="#D8D8D8" fill-rule="evenodd">
+        <g id="Layer_1" fill="#000000">
+            <path d="M234.057,466.66 C362.863,466.66 467.277,362.246 467.277,233.44 C467.277,104.612 362.863,0.198 234.057,0.198 C105.251,0.198 0.826,104.612 0.826,233.44 C0.826,362.246 105.251,466.66 234.057,466.66 L234.057,466.66 Z M98.82,180.601 C108.629,169.942 125.229,169.266 135.899,179.097 L235.877,271.02 L331.866,179.38 C342.33,169.397 358.983,169.789 368.967,180.274 C373.828,185.331 376.227,191.892 376.227,198.366 C376.227,205.32 373.524,212.23 368.096,217.352 L236.531,342.868 L100.379,217.702 C89.687,207.915 89.011,191.326 98.82,180.601 L98.82,180.601 Z M98.82,180.601" id="Shape" fill="#AAAAAA"></path>
+        </g>
+    </g>
+</svg>
