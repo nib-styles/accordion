@@ -4,5 +4,5 @@
   "version": "0.1.0",
   "dependencies": {},
   "styles": ["index.scss"],
-  "files": ["down.png", "up.png"]
+  "files": ["down.png", "up.png", "down.svg", "up.svg"]
 }
