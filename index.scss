@@ -6,16 +6,30 @@ $component-name: 'nib-styles-accordion';
     @extend .btn--panel;
     margin-bottom: -1px;
 
+    // Pre-load the other image so we don't get a flash
+    @include before {
+      background: no-repeat top right;
+      background-image: component-url('nib-styles-accordion', 'up.png');
+      background-image: component-url('nib-styles-accordion', 'up.svg'), none;
+      height: 0;
+      width: 0;
+      position: absolute;
+    }
+
     &:after {
       opacity: 0.8;
       @include show-pseudo-element;
       @include top-right(10px, 7px);
       height: 16px;
       width: 16px;
-      background: relative-url('down.png') no-repeat top right;
+      background: no-repeat top right;
+      background-image: component-url('nib-styles-accordion', 'down.png');
+      background-image: component-url('nib-styles-accordion', 'down.svg'), none;
+      background-size: 16px 16px;
     }
     &.is-open:after {
       background-image: relative-url('up.png');
+      background-image: relative-url('up.svg'), none;
     }
     &:hover {
       &::after {

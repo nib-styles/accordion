@@ -1,7 +1,7 @@
 {
   "name": "accordion",
   "main": "index.scss",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "dependencies": {},
   "styles": ["index.scss"],
   "files": ["down.png", "up.png", "down.svg", "up.svg"]
