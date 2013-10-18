@@ -1,8 +1,13 @@
 {
   "name": "accordion",
-  "main": "index.scss",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "dependencies": {},
-  "styles": ["index.scss"],
-  "files": ["down.png", "up.png", "down.svg", "up.svg"]
+  "styles": ["index.css"],
+  "images": [
+    "images/bg.png",
+    "images/down.png",
+    "images/up.png",
+    "images/down.svg",
+    "images/up.svg"
+  ]
 }

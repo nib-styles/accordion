@@ -1,60 +1,94 @@
-$component-name: 'nib-styles-accordion';
-
 .accordion {
-  .accordion__trigger {
-    @extend .btn;
-    @extend .btn--panel;
-    margin-bottom: -1px;
 
-    // Pre-load the other image so we don't get a flash
-    @include before {
-      background: no-repeat top right;
-      background-image: component-url('nib-styles-accordion', 'up.png');
-      background-image: component-url('nib-styles-accordion', 'up.svg'), none;
-      height: 0;
-      width: 0;
-      position: absolute;
-    }
+}
 
-    &:after {
-      opacity: 0.8;
-      @include show-pseudo-element;
-      @include top-right(10px, 7px);
-      height: 16px;
-      width: 16px;
-      background: no-repeat top right;
-      background-image: component-url('nib-styles-accordion', 'down.png');
-      background-image: component-url('nib-styles-accordion', 'down.svg'), none;
-      background-size: 16px 16px;
-    }
-    &.is-open:after {
-      background-image: relative-url('up.png');
-      background-image: relative-url('up.svg'), none;
-    }
-    &:hover {
-      &::after {
-        opacity: 1;
-      }
+.accordion + .accordion {
+  margin-bottom: -1px;
+}
+
+.accordion__trigger {
+  -webkit-font-smoothing:antialiased;
+  box-sizing:border-box;
+  font-size:13px;
+  font-weight:700;
+  line-height:30px;
+  position:relative;
+  text-decoration:none;
+  background:linear-gradient(top,#fff,#ddd);
+  border:1px solid #b9b9b9;
+  color:#666;
+  text-shadow:0 1px 0 #fff;
+  display:block;
+  width:100%;
+  padding:0 10px;
+}
+
+.accordion__trigger:hover,
+.accordion__trigger:active {
+  background:linear-gradient(top,#fff,#e5e5e5);
+}
+
+.accordion__trigger {
+  &:before {
+    content: '';
+    display: block;
+    background: no-repeat top right;
+    background-image: url('images/up.png');
+    background-image: url('images/up.svg'), none;
+    height: 0;
+    width: 0;
+    position: absolute;
+  }
+  &:after {
+    position: absolute;
+    top: 10px;
+    right: 7px;
+    opacity: 0.8;
+    display: block;
+    content: '';
+    height: 16px;
+    width: 16px;
+    background: no-repeat top right;
+    background-image: url('images/down.png');
+    background-image: url('images/down.svg'), none;
+    background-size: 16px 16px;
+  }
+  &.is-open:after {
+    background-image: url('images/up.png');
+    background-image: url('images/up.svg'), none;
+  }
+  &:hover {
+    &::after {
+      opacity: 1;
     }
   }
 }
 
 .csstransitions .accordion {
   .accordion__body {
-    @include transition(height 0.7s ease-in-out());
+    transition: height 0.7s ease-in-out;
     height: 0;
     overflow: hidden;
     &.no-transitions {
-      @include transition(none);
+      transition: none;
     }
   }
 }
 
-.no-csstransitions .accordion {
-  & > .accordion__body {
+.no-csstransitions {
+  .accordion > .accordion__body {
     display: none;
   }
-  &.is-open > .accordion__body {
+  .accordion.is-open > .accordion__body {
     display: block;
+  }
+}
+
+.no-cssgradients {
+  .accordion__trigger {
+    background:url(images/bg.png) bottom left repeat-x;
+  }
+  .accordion__trigger.is-disabled {
+    background:#ddd;
   }
 }
