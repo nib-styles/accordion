@@ -32,7 +32,7 @@
   position: absolute; }
 .accordion__trigger:after {
   position: absolute;
-  top: 10px;
+  top: 7px;
   right: 7px;
   opacity: 0.8;
   display: block;
