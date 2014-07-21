@@ -15,7 +15,7 @@
   text-shadow: 0 1px 0 #fff;
   display: block;
   width: 100%;
-  padding: 0 10px; }
+  padding: 0 35px 0 10px; }
 
 .accordion__trigger:hover,
 .accordion__trigger:active {
