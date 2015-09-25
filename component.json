@@ -1,13 +1,13 @@
 {
   "name": "accordion",
   "version": "0.2.0",
-  "dependencies": {},
-  "styles": ["index.css"],
-  "images": [
-    "images/bg.png",
-    "images/down.png",
-    "images/up.png",
-    "images/down.svg",
-    "images/up.svg"
-  ]
+  "dependencies": {
+    "nib-styles/v2-icons": "^2.6.2"
+  },
+  "development": {
+    "dependencies": {
+      "nib-components/accordion": "^0.2.1"
+    }
+  },
+  "styles": ["index.css"]
 }

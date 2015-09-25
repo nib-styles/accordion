@@ -1,9 +1,19 @@
 {
   "name": "@nib-styles/accordion",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "main.css": "index.css",
   "repository": {
     "type": "git",
     "url": "git@github.com:nib-styles/accordion.git"
+  },
+  "dependencies": {
+    "@nib-styles/v2-icons": "git://github.com/nib-styles/v2-icons"
+  },
+  "devDependencies": {
+    "@nib-components/accordion": "git://github.com/nib-components/accordion",
+    "browserify": "^11.2.0"
+  },
+  "scripts": {
+    "example.build": "browserify -r @nib-components/accordion:accordion -o ./build/build.js"
   }
 }
